@@ -3,16 +3,18 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main  # Trigger workflow on push to main branch
+      - main  # Trigger workflow on push to 'main' branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1) Check out the source code
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      # 2) Replace placeholders with secrets
       - name: Replace Placeholders with Secrets
         env:
           PHONE: ${{ secrets.PHONE }}
@@ -20,10 +22,15 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
         run: |
           echo "Replacing placeholders in HTML..."
-          sed -i "s|{{PHONE}}|${PHONE}|g" ./index.html
-          sed -i "s|{{EMAIL}}|${EMAIL}|g" ./index.html
-          sed -i "s|{{USERNAME}}|${USERNAME}|g" ./index.html
+          sed -i "s|{{PHONE}}|${PHONE}|g" index.html
+          sed -i "s|{{EMAIL}}|${EMAIL}|g" index.html
+          sed -i "s|{{USERNAME}}|${USERNAME}|g" index.html
 
+      # (Optional) Print out the modified index.html for debugging:
+      - name: Debug: Print index.html
+        run: cat index.html
+
+      # 3) Copy only deployable files (HTML, CSS, images, etc.) to a 'deploy' folder
       - name: Copy Deployable Files
         run: |
           echo "Copying deployable files..."
@@ -31,8 +38,9 @@ jobs:
           cp index.html favicon.svg deploy/
           cp -r ./assets deploy/
 
+      # 4) Deploy to GitHub Pages from the 'deploy' folder
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deploy  # Deploy only the deployable files
+          publish_dir: ./deploy
