@@ -1,0 +1,31 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on push to main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Replace Placeholders with Secrets
+        env:
+          PHONE: ${{ secrets.PHONE }}
+          EMAIL: ${{ secrets.EMAIL }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
+          echo "Replacing placeholders in HTML..."
+          sed -i "s/{{PHONE}}/${PHONE}/g" ./index.html
+          sed -i "s/{{EMAIL}}/${EMAIL}/g" ./index.html
+          sed -i "s/{{USERNAME}}/${USERNAME}/g" ./index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Directory to deploy (adjust if needed)
