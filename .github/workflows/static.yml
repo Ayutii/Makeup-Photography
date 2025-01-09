@@ -37,13 +37,15 @@ jobs:
           YTUSERNAME: ${{ secrets.YTUSERNAME }}
         run: |
           echo "Replacing placeholders in HTML files..."
-          sed -i "s|{{PHONE}}|${PHONE}|g" ./index.html
-          sed -i "s|{{EMAIL}}|${EMAIL}|g" ./index.html
-          sed -i "s|{{TGUSERNAME}}|${TGUSERNAME}|g" ./index.html
-          sed -i "s|{{TTUSERNAME}}|${TTUSERNAME}|g" ./index.html
-          sed -i "s|{{IGUSERNAME}}|${IGUSERNAME}|g" ./index.html
-          sed -i "s|{{FBUSERNAME}}|${FBUSERNAME}|g" ./index.html
-          sed -i "s|{{YTUSERNAME}}|${YTUSERNAME}|g" ./index.html
+          for file in ./*.html; do
+            sed -i "s|{{PHONE}}|${PHONE}|g" "$file"
+            sed -i "s|{{EMAIL}}|${EMAIL}|g" "$file"
+            sed -i "s|{{TGUSERNAME}}|${TGUSERNAME}|g" "$file"
+            sed -i "s|{{TTUSERNAME}}|${TTUSERNAME}|g" "$file"
+            sed -i "s|{{IGUSERNAME}}|${IGUSERNAME}|g" "$file"
+            sed -i "s|{{FBUSERNAME}}|${FBUSERNAME}|g" "$file"
+            sed -i "s|{{YTUSERNAME}}|${YTUSERNAME}|g" "$file"
+          done
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
