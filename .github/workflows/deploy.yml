@@ -20,12 +20,19 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
         run: |
           echo "Replacing placeholders in HTML..."
-          sed -i "s/{{PHONE}}/${PHONE}/g" ./index.html
-          sed -i "s/{{EMAIL}}/${EMAIL}/g" ./index.html
-          sed -i "s/{{USERNAME}}/${USERNAME}/g" ./index.html
+          sed -i "s|{{PHONE}}|${PHONE}|g" ./index.html
+          sed -i "s|{{EMAIL}}|${EMAIL}|g" ./index.html
+          sed -i "s|{{USERNAME}}|${USERNAME}|g" ./index.html
+
+      - name: Copy Deployable Files
+        run: |
+          echo "Copying deployable files..."
+          mkdir deploy
+          cp index.html favicon.svg deploy/
+          cp -r ./assets deploy/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Directory to deploy (adjust if needed)
+          publish_dir: ./deploy  # Deploy only the deployable files
