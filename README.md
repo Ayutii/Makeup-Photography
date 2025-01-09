@@ -26,6 +26,7 @@ This project highlights skills in **front-end development**, **responsive design
 - **Services Carousel:** A visually engaging carousel showcasing the main services (Makeup, Photography, and Consultation).
 - **Contact Section:** Easy access to contact information with clickable phone, email, Telegram links, and social media channels. 
 - **Floating Telegram Widget:** A seamless way for users to start a chat via Telegram, thanks to [MyAlice Telegram Widget](https://www.myalice.ai/telegram-widget).
+- **Dynamic Year:** Automatically updates the copyright year in the footer.
 - **Responsive Design:** Fully optimized for all screen sizes.
 - **Dynamic Deployment:** Sensitive information is handled securely using GitHub secrets and environment variables.
 - **GitHub Actions CI/CD:** Automated workflow for continuous deployment to GitHub Pages.
@@ -58,6 +59,7 @@ This project highlights skills in **front-end development**, **responsive design
 ├── about.html            # About Me page
 ├── portfolio.html        # Portfolio page
 ├── privacy-policy.html   # Privacy Policy page
+├── refund-policy.html    # Refund Policy page
 ├── terms.html            # Terms and Conditions page
 ├── favicon.svg           # Favicon for the website
 ├── README.md             # Project documentation
@@ -100,7 +102,7 @@ The website is automatically deployed to GitHub Pages using **GitHub Actions**. 
 
 ## 📬 Contact
 
-If you have any questions or feedback, feel free to reach out to me via [LinkedIn](https://github.com/naolmengistu).
+If you have any questions or feedback, feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/naolmengistu/).
 
 ---
 
