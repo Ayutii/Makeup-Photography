@@ -72,12 +72,16 @@
               <a href="#collection" class="navbar-link has-after">Services</a>
             </li>
 
+            <li>
+              <a href="./portfolio.html" class="navbar-link has-after">Portfolio</a>
+            </li>
+
             <li>  
               <a href="#ContactUs" class="navbar-link has-after">Contact</a>
             </li>
 
             <li>
-              <a href="#blog" class="navbar-link has-after">About</a>
+              <a href="./about.html" class="navbar-link has-after">About</a>
             </li>
 
             
@@ -118,12 +122,16 @@
           <a href="#collection" class="navbar-link" data-nav-link>Services</a>
         </li>
 
+        <li>
+          <a href="./portfolio.html" class="navbar-link has-after">Portfolio</a>
+        </li>
+
         <li>  
           <a href="#ContactUs" class="navbar-link" data-nav-link>Contact</a>
         </li>
 
         <li>
-          <a href="#blog" class="navbar-link" data-nav-link>About</a>
+          <a href="./about.html" class="navbar-link" data-nav-link>About</a>
         </li>
 
       </ul>
@@ -176,8 +184,8 @@
                 <div class="card-content">
 
                   <h1 class="h1 hero-title">
-                    Capture<br>
-                    Timeless Memories
+                    Capture Timeless<br>
+                    Memories
                   </h1>
 
                   <p class="hero-text">
@@ -227,6 +235,13 @@
       -->
 
       <section class="section collection" id="collection" aria-label="collection" data-section>
+        
+        <div class="section services">
+
+            <h2 class="h2-large section-title">Services</h2>
+            
+        </div>
+        
         <div class="container">
 
           <ul class="collection-list">
@@ -308,6 +323,9 @@
         </div>
       </section>
 
+
+      <!--Stories-->
+
       <section class="section blog" id="blog" aria-label="blog" data-section>
         <div class="container">
 
@@ -324,10 +342,10 @@
                 </figure>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">About Me</a>
+                  <a href="./about.html" class="card-title">About Me</a>
                 </h3>
 
-                <a href="#" class="btn-link">
+                <a href="./about.html" class="btn-link">
                   <span class="span">Read More</span>
 
                   <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -345,15 +363,15 @@
                 </figure>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Portfolio</a>
+                  <a href="./portfolio.html" class="card-title">Portfolio</a>
                 </h3>
 
-                <a href="#" class="btn-link">
+                <a href="./portfolio.html" class="btn-link">
                   <span class="span">See More</span>
 
                   <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                 </a>
-
+                
               </div>
             </li>
 
@@ -377,21 +395,24 @@
           <li><p class="footer-list-title">Contact</p></li>
           <li><a class="footer-link" href="tel:{{PHONE}}">Call</a></li>
           <li><a class="footer-link" href="mailto:{{EMAIL}}">Email Us</a></li>
-          <li><a href="https://t.me/{{USERNAME}}" class="footer-link" target="_blank">Telegram Chat</a></li>
+          <li><a href="https://t.me/{{TGUSERNAME}}" class="footer-link" target="_blank">Telegram Chat</a></li>
+          <li><a href="https://wa.me/{{PHONE}}" class="footer-link" target="_blank">WhatsApp Chat</a></li>
+
         </ul>
   
         <ul class="footer-list">
           <li><p class="footer-list-title">Information</p></li>
-          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
-          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="./terms.html" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="./privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="./refund-policy.html" class="footer-link">Refund Policy</a></li>
         </ul>
   
         <ul class="footer-list">
           <li><p class="footer-list-title">Follow Us</p></li>
-          <li><a href="#" class="footer-link">TikTok</a></li>
-          <li><a href="#" class="footer-link">Instagram</a></li>
-          <li><a href="#" class="footer-link">Facebook</a></li>
-          <li><a href="#" class="footer-link">Youtube</a></li>
+          <li><a href="https://t.me/{{TTUSERNAME}}" class="footer-link" target="_blank">TikTok</a></li>
+          <li><a href="https://www.instagram.com/{{IGUSERNAME}}" class="footer-link" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/{{FBUSERNAME}}" class="footer-link" target="_blank">Facebook</a></li>
+          <li><a href="https://www.youtube.com/@{{YTUSERNAME}}" class="footer-link" target="_blank">YouTube</a></li>
         </ul>
   
       </div>
@@ -409,7 +430,7 @@
             n.addEventListener("load", function() {
               MyAliceWebChat.init({
                 selector: "myAliceWebChat",
-                number: "{{USERNAME}}",
+                number: "{{TGUSERNAME}}",
                 message: "",
                 color: "#767676",
                 channel: "tg",
@@ -437,7 +458,7 @@
   </footer>
 
   <!-- 
-    - #BACK TO TOP
+    - #BACK TO TOP Button
   -->
 
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
@@ -453,7 +474,6 @@
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
+
 </body>
 </html>

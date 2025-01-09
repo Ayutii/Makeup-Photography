@@ -447,7 +447,7 @@ body {
 }
 
 .nav-close-btn {
-  font-size: 28px;
+  font-size: 35px;
   color: var(--hoockers-green);
 }
 
@@ -545,6 +545,15 @@ body {
   margin-block-end: auto;
 }
 
+/*-----------------------------------*\
+  #services
+\*-----------------------------------*/
+
+.services .section-title {
+  text-align: center;
+  margin-block-start: -40px;
+}
+
 
 
 /*-----------------------------------*\
@@ -555,7 +564,8 @@ body {
 
 .blog .section-title {
   text-align: center;
-  margin-block-end: 40px;
+  margin-block-end: 30px;
+  margin-block-start: -40px;
 }
 
 .blog-card .card-banner img { transition: var(--transition-2); }
