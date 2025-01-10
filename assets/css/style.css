@@ -689,11 +689,16 @@ body {
 \*-----------------------------------*/
 
 
+/**
+ * Base (Mobile-First) Styles
+ * - Up to 576px (small phones).
+ * - Already defined above these media queries.
+ */
+
 /* For smaller screens - fix hero-card height */
 @media (max-width: 440px) {
   .hero-card {
-    min-height: 300px; /* Set a consistent minimum height */
-    display: flex;
+    min-height: 300px; /* Set a consistent minimum height */;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -704,11 +709,6 @@ body {
   }
 }
  
-/**
- * Base (Mobile-First) Styles
- * - Up to 576px (small phones).
- * - Already defined above these media queries.
- */
 
 /*=====================================================================
   For devices >= 576px (small phones, older iPhones & Androids)
