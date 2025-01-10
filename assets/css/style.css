@@ -688,6 +688,22 @@ body {
   #MEDIA QUERIES
 \*-----------------------------------*/
 
+
+/* For smaller screens - fix hero-card height */
+@media (max-width: 440px) {
+  .hero-card {
+    min-height: 300px; /* Set a consistent minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scrollbar-item {
+    flex: 0 0 auto; /* Prevent stretching */
+  }
+}
+ 
 /**
  * Base (Mobile-First) Styles
  * - Up to 576px (small phones).
