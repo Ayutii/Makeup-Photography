@@ -2,13 +2,13 @@
 
 Welcome to the **Ayuti - Makeup & Photography** project! This is a clean, responsive, and functional website designed to support professional makeup, photography, and consultation services.
 
-## 🖥️ Live Demo
+## Live Demo
 
 You can view the live website here: [Ayuti - Makeup & Photography](https://ayutii.github.io/Makeup-Photography/)
 
 ---
 
-## 📌 About
+## About
 
 The **Ayuti** project represents a modern and elegant web solution for a beauty and photography service provider. The website includes pages for:
 - **Home:** Showcasing main services and promotions.
@@ -21,7 +21,7 @@ This project highlights skills in **front-end development**, **responsive design
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Services Carousel:** A visually engaging carousel showcasing the main services (Makeup, Photography, and Consultation).
 - **Contact Section:** Easy access to contact information with clickable phone, email, Telegram links, and social media channels. 
@@ -33,7 +33,7 @@ This project highlights skills in **front-end development**, **responsive design
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5** and **CSS3**: For structure and styling.
 - **JavaScript**: For interactivity and dynamic features.
@@ -44,7 +44,7 @@ This project highlights skills in **front-end development**, **responsive design
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 .
@@ -67,7 +67,7 @@ This project highlights skills in **front-end development**, **responsive design
 
 ---
 
-## 📖 Lessons Learned
+## Lessons Learned
 
 This project taught me:
 - How to securely manage sensitive information using **environment variables** and **GitHub Secrets**.
@@ -77,7 +77,7 @@ This project taught me:
 
 ---
 
-## 🛠️ Setup & Deployment
+## Setup & Deployment
 
 ### Prerequisites
 - A GitHub account.
@@ -100,13 +100,13 @@ The website is automatically deployed to GitHub Pages using **GitHub Actions**. 
 
 ---
 
-## 📬 Contact
+## Contact
 
 If you have any questions or feedback, feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/naolmengistu/).
 
 ---
 
-## 🤝 Acknowledgments
+## Acknowledgments
 
 - **Calendly** for their booking service & widget integration.
 - **MyAlice** for the floating Telegram chat widget.
